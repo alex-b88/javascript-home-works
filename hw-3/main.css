@@ -67,3 +67,48 @@ li{
 .product-card>span{
     font-size: 20px;
 }
+
+.lists{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.lists table{
+    width: 30%;
+    border-collapse: collapse;
+    color: #14597e;
+}
+
+.lists table th,td{
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.lists table th{
+    height: 40px;
+    background: #f8efed;
+}
+
+.lists table th{
+    font-size: 20px;
+}
+
+.lists table tr{
+    font-size: 18px;
+}
+
+.lists table td::first-letter{
+    text-transform: uppercase;
+}
+
+.lists table tr:nth-child(even){
+    background: #f4d1ed;
+}
+
+.lists table tr:nth-child(odd){
+    background: #6b97e1;
+}
