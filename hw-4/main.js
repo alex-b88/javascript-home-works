@@ -160,3 +160,15 @@ function swap(arr, index1, index2){
 swap(myArray, 1,4);
 
 //- Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+function exchange(sumUAH, currencyValues, exchangeCurrency){
+    if(isNumber(sumUAH) && sumUAH>0 && Array.isArray(currencyValues) && currencyValues.length>0){
+        let exchangeAmount =0;
+        for(const obj of currencyValues){
+            if(obj.currency === exchangeCurrency){
+                exchangeAmount = sumUAH / obj.value;
+            }
+        }
+        document.write(`<div>${exchangeAmount.toFixed(2)}</div>`)
+    }
+}
+exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD');
