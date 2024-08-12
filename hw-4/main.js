@@ -3,12 +3,18 @@ function isNumber(value) {
     return typeof value === 'number';
 }
 
+//array
+const myArray = [
+    'hello', 42, true, 3, null, 51, undefined, -10, { name: 'Alice', age: 30 }, 0, 'good', -25
+];
+
 //- створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 function rectSquare(sidA, sideB){
     if(isNumber(sidA) && isNumber(sideB) && sidA>0 && sideB>0){
         return sidA*sideB;
     }
 }
+console.log(rectSquare(4,7));
 
 //- створити функцію яка обчислює та повертає площу кола з радіусом r
 function circleSquare(radius){
@@ -16,6 +22,7 @@ function circleSquare(radius){
         return Math.PI * radius**2;
     }
 }
+console.log(circleSquare(20));
 
 //- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 function cylinderSquare(radius, height){
@@ -23,6 +30,7 @@ function cylinderSquare(radius, height){
         return 2 * Math.PI * radius * (radius + height);
     }
 }
+console.log(cylinderSquare(3,6));
 
 //- створити функцію яка приймає масив та виводить кожен його елемент
 function showArray(arr){
@@ -32,6 +40,7 @@ function showArray(arr){
         }
     }
 }
+showArray(myArray);
 
 //- створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
 text = "Hello world!";
@@ -116,10 +125,6 @@ function showObjects(array){
 showObjects(people);
 
 //- створити функцію яка повертає найменьше число з масиву
-const myArray = [
-    'hello', 42, true, 3, null, 51, undefined, -10, { name: 'Alice', age: 30 }, 0, 'good', -25
-];
-
 function findMinInArray(arr){
     if(Array.isArray(arr) && arr.length > 0){
         let min;
