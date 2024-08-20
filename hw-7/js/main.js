@@ -9,6 +9,8 @@ function User(id, name, surname , email, phone){
     this.phone = phone;
 }
 
+let usr = new User(1, "John", "Doe", "john.doe@example.com", "1234567890");
+
 let arrayOfUsers = [];
 arrayOfUsers.push(new User(1, "John", "Doe", "john.doe@example.com", "1234567890"));
 arrayOfUsers.push(new User(2, "Jane", "Smith", "jane.smith@example.com", "0987654321"));
@@ -170,9 +172,32 @@ console.log(shoeSize);
 
 //*Через Array.prototype. створити власний foreach, filter
 
-let myArr = [3, 17, 6, 8, 13, 19, 2, 11, 14, 5, 7, 1, 15, 12, 10, 0, 18, 9, 4, 20];
+let arr = [3, 17, 6, 8, 13, 19, 2, 11, 14, 5, 7, 1, 15, 12, 10, 0, 18, 9, 4, 20];
 
-// Array.prototype.filter = function (min, max){
-//     return this.filter(item => item >=min && item <=max)
-// }
-console.log(typeof Array);
+Array.prototype.myFilter = function (min, max){
+        let tmpArr =[];
+        for (const obj of this) {
+            if(obj>=min && obj<=max){
+                tmpArr.push(obj);
+            }
+        }
+        return tmpArr;
+}
+let newArr = arr.myFilter(10, 20);
+console.log(newArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
