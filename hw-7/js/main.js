@@ -187,6 +187,14 @@ let newArr = arr.myFilter(10, 20);
 console.log(newArr);
 
 
+Array.prototype.myForEach = function (fn){
+    let item = this;
+    for (const obj of item) {
+            fn(obj);
+    }
+}
+
+arr.myForEach((arr)=> console.log(arr));
 
 
 
