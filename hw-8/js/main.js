@@ -9,7 +9,7 @@ function deepClone(obj) {
     }
 
     if (typeof obj === 'function') {
-        return obj.bind({});
+        return obj;
     }
 
     if (obj === null) return null;
@@ -61,6 +61,7 @@ const original = {
 
 const cloned = deepClone(original);
 console.log(cloned);
+cloned.greet();
 
 //- є масив
 // за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration
