@@ -6,9 +6,10 @@
 
 body{
     padding-top: 30px;
+    margin: 0 auto;
     width: 90vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
