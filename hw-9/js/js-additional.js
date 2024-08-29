@@ -74,19 +74,18 @@ for (const course of coursesArray) {
     let div = document.createElement('div');
     div.style.display = 'flex';
     div.style.gap = '10px';
-    div.style.alignSelf = 'center';
     div.innerHTML = `
         <p>${course.monthDuration} months</p>
         <p>${course.hourDuration} hours</p>`;
 
     let h2Tag = document.createElement('h2');
     h2Tag.textContent = course.title;
-    h2Tag.style.alignSelf = 'center';
     card.appendChild(h2Tag);
     card.appendChild(div);
 
     let ul = document.createElement('ul');
     ul.innerHTML = course.modules.map(module => `<li>${module}</li>`).join('');
+    ul.style.alignSelf = 'flex-start';
     card.appendChild(ul);
 
     document.body.appendChild(card);
