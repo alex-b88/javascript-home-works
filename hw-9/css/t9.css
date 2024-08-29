@@ -19,14 +19,10 @@ body{
     width: 300px;
     background-color: rgb(46, 93, 152);
     color: #f8efed;
-    padding: 15px 20px;
+    padding: 15px 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
-}
-
-ul{
-    margin-left: 20px;
 }
