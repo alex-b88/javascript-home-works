@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+#text{
+    width: 200px;
+    height: 150px;
+    background-color: #16455b;
+    color: beige;
+    text-align: center;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    background-color: dodgerblue;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#ageField{
+    width: 250px;
+    height: 40px;
+    padding-left: 5px;
+    font-size: 18px;
+    color: darkgray;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+#ageField:focus{
+    outline: none;
+}
+
+#ageField::placeholder{
+    font-size: 18px;
+    color: darkgray;
+}
+
+.form1, .form2{
+    padding-top: 25px;
+    width: 300px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #a2d8e9;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.form1 input[type=text], input[type=number]{
+    width: 90%;
+    height: 35px;
+    padding-left: 5px;
+    border: 1px solid #f8bab2;
+}
+
+.form1 input[type=text]:focus, input[type=number]:focus{
+    outline: none;
+}
+
+.form1>button{
+    width: 90%;
+    height: 40px;
+    border: none;
+    background-color: #1747ac;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form1>button:hover{
+    background-color: #1f87d4;
+    font-size: 22px;
+}
+
+.entred-data{
+    width: 300px;
+    height: 200px;
+    background-color: #156890;
+    border: 1px solid #a3ffeb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #f8efed;
+    font-size: 18px;
+}
+
+.reloadsCounter{
+    width: 135px;
+    height: 55px;
+    background-color: #16455b;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.sessionList{
+    padding: 25px 0;
+    width: 300px;
+    /*height: 270px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #a2d8e9;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.form2{
+    height: unset;
+    padding-bottom: 20px;
+}

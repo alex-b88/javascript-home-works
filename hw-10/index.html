@@ -9,6 +9,29 @@
 </head>
 <body>
 
-<script src="js/maim.js"></script>
+<div id="text">Hide me!</div>
+<button class="btn" onclick="hideText()">Hide</button>
+
+<input id="ageField" type="text" placeholder="enter your age here...">
+<button class="btn" onclick="submitAge()">Submit</button>
+
+<form class="form1" name="form1">
+  <input type="text" name="name" placeholder="Enter your name">
+  <input type="text" name="surname" placeholder="Enter your surname">
+  <input type="number" name="age" placeholder="Enter your age">
+  <button>Send</button>
+</form>
+
+<div class="reloadsCounter">
+    <p>Page reloads:</p>
+    <p id="counter"></p>
+</div>
+
+<form class="form2" name="form2">
+    <p>Kg to pounds</p>
+    <input type="number" name="kg" placeholder="Enter kg to convert">
+    <p class="equals"></p>
+</form>
+<script src="js/main.js"></script>
 </body>
 </html>
