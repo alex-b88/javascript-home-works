@@ -87,3 +87,47 @@ inputKg.addEventListener('input', (event) => {
     const pounds = document.querySelector('.form2 .equals');
     pounds.innerText = `${(inputKg.value*2.2).toFixed(2)} pounds`;
 })
+
+//В localStorage зберігаються масиви. Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає
+// в нього об'єкт сигнатура функції -
+// addToLocalStorage(arrayName:string,objToAdd:any{}):void
+
+function addToLocalStorage(arrayName, obj){
+    let array = JSON.parse(localStorage.getItem(arrayName)) || [];
+    array.push(obj);
+    localStorage.setItem(arrayName, JSON.stringify(array));
+}
+let client ={
+    name: 'elvis',
+    surname: 'prestly'
+}
+
+addToLocalStorage('arrayList', '5');
+addToLocalStorage('arrayList', -4);
+addToLocalStorage('arrayList', true);
+addToLocalStorage('arrayList', client);
+addToLocalStorage('arrayList', false);
+
+// Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+// При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+
+let form3 = document.forms.form3;
+form3.addEventListener('submit', (eventObject) =>{
+    eventObject.preventDefault();
+    let table = document.createElement('table');
+    table.classList.add('table1');
+    let rows = form3.elements['horizontal'].value;
+    let colums = form3.elements['vertical'].value;
+    let data = form3.elements['data'].value;
+    console.log(rows, colums, data);
+    for (let i = 0; i < colums; i++) {
+        let row = document.createElement('tr');
+            for (let j = 0; j < rows; j++) {
+                let cell = document.createElement('td');
+                cell.innerText = data;
+                row.appendChild(cell);
+            }
+        table.appendChild(row);
+    }
+    document.body.appendChild(table);
+})

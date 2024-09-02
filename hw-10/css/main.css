@@ -70,7 +70,7 @@ body{
     border-radius: 10px;
 }
 
-.form1 input[type=text], input[type=number]{
+input[type=text], input[type=number]{
     width: 90%;
     height: 35px;
     padding-left: 5px;
@@ -81,7 +81,7 @@ body{
     outline: none;
 }
 
-.form1>button{
+.form1>button, .form3>button{
     width: 90%;
     height: 40px;
     border: none;
@@ -143,4 +143,40 @@ body{
 .form2{
     height: unset;
     padding-bottom: 20px;
+}
+
+.form3{
+    padding-top: 25px;
+    width: 300px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #a2d8e9;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.table1{
+    border: 1px solid #f8bab2;
+    border-collapse: collapse;
+}
+
+.table1 th{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table1 td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
