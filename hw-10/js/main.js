@@ -34,11 +34,10 @@ function submitAge () {
 // та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
 
 let form1 = document.forms.form1;
-form1.addEventListener('submit', (eventObject) =>{
+form1.onsubmit = function(eventObject) {
     eventObject.preventDefault();
-    console.log(form1.elements['name'].value);
-    createBlock(form1.elements['name'].value, form1.elements['surname'].value, form1.elements['age'].value);
-})
+    createBlock(this.name.value, this.surname.value, this.age.value);
+}
 
 function createBlock(name, surname, age){
     let div = document.createElement("div");
@@ -82,11 +81,10 @@ function getCurrentTime() {
 let form2 = document.forms.form2;
 let inputKg = form2.querySelector('input[name="kg"]');
 
-
-inputKg.addEventListener('input', (event) => {
-    const pounds = document.querySelector('.form2 .equals');
-    pounds.innerText = `${(inputKg.value*2.2).toFixed(2)} pounds`;
-})
+form2.kg.oninput = function (){
+    let pounds = document.querySelector('.form2 .equals');
+    pounds.innerText = `${(form2.kg.value*2.2).toFixed(2)} pounds`;
+}
 
 //В localStorage зберігаються масиви. Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає
 // в нього об'єкт сигнатура функції -
@@ -112,14 +110,13 @@ addToLocalStorage('arrayList', false);
 // При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 
 let form3 = document.forms.form3;
-form3.addEventListener('submit', (eventObject) =>{
+form3.addEventListener('submit', function(eventObject){
     eventObject.preventDefault();
     let table = document.createElement('table');
     table.classList.add('table1');
-    let rows = form3.elements['horizontal'].value;
-    let colums = form3.elements['vertical'].value;
+    let rows = this.horizontal.value;
+    let colums = this.vertical.value;
     let data = form3.elements['data'].value;
-    console.log(rows, colums, data);
     for (let i = 0; i < colums; i++) {
         let row = document.createElement('tr');
             for (let j = 0; j < rows; j++) {

@@ -13,10 +13,12 @@
       padding-top: 40px;
       width: 80vw;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 20px;
     }
-    div{
+    .uah{
       background-color: #1f87d4;
       padding: 30px 50px;
       display: flex;
@@ -25,11 +27,35 @@
       color: #f8efed;
       font-size: 25px;
     }
+    .array-list{
+      padding: 10px;
+      background-color: #1f87d4;
+      width: 250px;
+      /*height: 300px;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .array-list div:last-of-type{
+      margin-top: 15px;
+    }
+    .array-list button{
+      padding: 7px 25px;
+    }
   </style>
 </head>
 <body>
-<div>
+<div class="uah">
   <p class="nominal">100</p>
+</div>
+<div class="array-list">
+
+  <div>
+    <button id="prev" onclick="showPrev()">Prev</button>
+    <button id="next" onclick="showNext()">Next</button>
+  </div>
 </div>
 <script src="js/additional.js"></script>
 </body>
